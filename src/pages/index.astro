@@ -1,21 +1,109 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+<Layout title="Bantu Stream Connect">
+
+  <!-- 1. HEADER -->
+  <header class="sticky top-0 bg-black text-white flex justify-between items-center px-6 py-4 shadow-lg z-50">
+    <h1 class="text-xl font-bold">Bantu Stream Connect</h1>
+    <nav class="space-x-6">
+      <a href="#about" class="hover:text-blue-400">About</a>
+      <a href="#features" class="hover:text-blue-400">Features</a>
+      <a href="#signup" class="hover:text-blue-400">Sign Up</a>
+    </nav>
+    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Join Early</a>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="text-center bg-gradient-to-r from-blue-900 to-black text-white py-20 px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+      The African way baba, it’s all in the DNA.
+    </h2>
+    <p class="text-lg md:text-xl mb-8">
+      A platform built for African creators and audiences. Music, Film, Podcasts, STEM — all in one place.
     </p>
+    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg">Sign Up Today →</a>
+    <div class="mt-10">
+      <!-- Placeholder for app mockup image -->
+      <img src="/placeholder-app.png" alt="App Preview" class="mx-auto rounded-xl shadow-lg max-w-md" />
+    </div>
+  </section>
+
+  <!-- 3. APP PREVIEW SECTION -->
+  <section id="features" class="py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-8">A Glimpse of What’s Coming</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">Upload screen</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">Audio/Video player</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">Explore page</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">Creator dashboard</div>
+    </div>
+    <p class="mt-6 text-gray-600">Built with security and community at heart. Your data is safe with us.</p>
+  </section>
+
+  <!-- 4. BENEFITS SECTION -->
+  <section class="bg-gray-900 text-white py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-12">Why Join Bantu Stream Connect Before Launch?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-6 bg-gray-800 rounded-lg">
+        🎬 <h4 class="font-semibold text-xl mt-2">Exclusive First Access</h4>
+        <p>Be first to explore African content.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-lg">
+        💸 <h4 class="font-semibold text-xl mt-2">Support Creators</h4>
+        <p>Empower local voices from day one.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-lg">
+        🚀 <h4 class="font-semibold text-xl mt-2">Shape the Platform</h4>
+        <p>Early users get to influence the journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MISSION SECTION -->
+  <section id="about" class="py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-6">Made by Africans, for Africans</h3>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700">
+      Our mission is to empower creators and audiences across the continent.
+      We’re not just building another app — we’re building a digital home for African stories,
+      music, and innovation.
+    </p>
+    <div class="mt-8">
+      <img src="/africa-map.png" alt="Africa Map" class="mx-auto w-48 opacity-80" />
+    </div>
+  </section>
+
+  <!-- 6. SIGNUP SECTION -->
+  <section id="signup" class="bg-blue-50 py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-6">Be Part of the Movement</h3>
+    <p class="mb-8">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
+    <form class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4">
+      <input type="text" placeholder="Name" class="w-full border rounded px-4 py-2" />
+      <input type="email" placeholder="Email" class="w-full border rounded px-4 py-2" />
+      <input type="password" placeholder="Password" class="w-full border rounded px-4 py-2" />
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- 7. COMING SOON SECTION -->
+  <section class="text-center py-20 px-6">
+    <h3 class="text-3xl font-bold mb-6">Launching Soon</h3>
+    <div class="flex justify-center gap-6">
+      <span class="px-4 py-2 bg-gray-200 rounded-lg">Coming Soon on Google Play</span>
+      <span class="px-4 py-2 bg-gray-200 rounded-lg">Coming Soon on App Store</span>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer class="bg-black text-white py-10 px-6 text-center">
+    <div class="mb-4 space-x-6">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="text-sm">© 2025 Bantu Stream Connect Pty Ltd. All rights reserved.</p>
+    <p class="mt-2 text-xs opacity-75">Built with ❤️ in Africa.</p>
+  </footer>
+
 </Layout>
