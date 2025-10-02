@@ -6,13 +6,13 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- 1. HEADER -->
   <header class="sticky top-0 bg-black text-white flex justify-between items-center px-6 py-4 shadow-lg z-50">
-    <img src="/images/BSC-LOGO0219.png" alt="Bantu Stream Connect Logo" class="h-10" width="150" height="40" />
+    <img src="/images/BSC-LOGO0219.png" alt="Bantu Stream Connect Logo" class="h-10 logo-hover" width="150" height="40" />
     <nav class="space-x-6">
-      <a href="#about" class="hover:text-blue-400">About</a>
-      <a href="#features" class="hover:text-blue-400">Features</a>
-      <a href="#signup" class="hover:text-blue-400">Sign Up</a>
+      <a href="#about" class="hover:glow-text">About</a>
+      <a href="#features" class="hover:glow-text">Features</a>
+      <a href="#signup" class="hover:glow-text">Sign Up</a>
     </nav>
-    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg glow-animation pulse-hover">Join Early</a>
+    <a href="#signup" class="bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg glow-animation pulse-hover">Join Early</a>
   </header>
 
   <!-- 2. HERO SECTION -->
@@ -21,17 +21,17 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-4xl md:text-5xl font-extrabold mb-4 relative z-10 glow-animation">
       The African way baba, it’s all in the DNA.
     </h2>
-    <p class="text-lg md:text-xl mb-8 relative z-10">
+    <p class="text-lg md:text-xl mb-8 relative z-10 glow-text">
       A platform built for African creators and audiences. Music, Film, Podcasts, STEM — all in one place.
     </p>
-    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg relative z-10 glow-animation pulse-hover">Sign Up Today →</a>
+    <a href="#signup" class="bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-6 py-3 rounded-lg text-lg relative z-10 glow-animation pulse-hover">Sign Up Today →</a>
     <div class="mt-10 relative z-10">
       <img 
         src="/images/SPLASH-SCREEN.png" 
         alt="App Splash Screen" 
         width="400" 
         height="700"
-        class="mx-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500" 
+        class="mx-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500 hover-img" 
       />
     </div>
   </section>
@@ -40,41 +40,44 @@ import Layout from '../layouts/Layout.astro';
   <section id="features" class="py-20 px-6 text-center">
     <h3 class="text-3xl font-bold mb-8 glow-animation">A Glimpse of What’s Coming</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-4 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition">
-        <img src="/images/CREATOR-UPLOAD-1.png" alt="Upload Screen" width="300" height="600" class="rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
-        <p class="mt-3 font-medium">Upload Screen</p>
+      <div class="p-4 rounded-lg hover:shadow-xl transition hover-img bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900 shadow-lg">
+        <img src="/images/CREATOR-UPLOAD-1.png" alt="Upload Screen" width="300" height="600" class="rounded-xl shadow-md transition-transform duration-300" />
+        <p class="mt-3 font-medium glow-text">Upload Screen</p>
       </div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition">
-        <img src="/images/HOME-FEED-1.png" alt="Home Feed" width="300" height="600" class="rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
-        <p class="mt-3 font-medium">Audio/Video Player</p>
+      <div class="p-4 rounded-lg hover:shadow-xl transition hover-img bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900 shadow-lg">
+        <img src="/images/HOME-FEED-1.png" alt="Home Feed" width="300" height="600" class="rounded-xl shadow-md transition-transform duration-300" />
+        <p class="mt-3 font-medium glow-text">Audio/Video Player</p>
       </div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition">
-        <img src="/images/LOG-IN-SCREEN-1.png" alt="Login Screen" width="300" height="600" class="rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
-        <p class="mt-3 font-medium">Explore Page</p>
+      <div class="p-4 rounded-lg hover:shadow-xl transition hover-img bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900 shadow-lg">
+        <img src="/images/LOG-IN-SCREEN-1.png" alt="Login Screen" width="300" height="600" class="rounded-xl shadow-md transition-transform duration-300" />
+        <p class="mt-3 font-medium glow-text">Explore Page</p>
       </div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition">
-        <img src="/images/CREATOR-DASHBOARD-1.png" alt="Creator Dashboard" width="300" height="600" class="rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
-        <p class="mt-3 font-medium">Creator Dashboard</p>
+      <div class="p-4 rounded-lg hover:shadow-xl transition hover-img bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900 shadow-lg">
+        <img src="/images/CREATOR-DASHBOARD-1.png" alt="Creator Dashboard" width="300" height="600" class="rounded-xl shadow-md transition-transform duration-300" />
+        <p class="mt-3 font-medium glow-text">Creator Dashboard</p>
       </div>
     </div>
-    <p class="mt-6 text-gray-600">Built with security and community at heart. Your data is safe with us.</p>
+    <p class="mt-6 text-yellow-300 glow-text">Built with security and community at heart. Your data is safe with us.</p>
   </section>
 
   <!-- 4. BENEFITS SECTION: Why Join Bantu Stream Connect Before Launch? -->
-  <section class="bg-gray-900 text-white py-20 px-6 text-center">
+  <section class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 px-6 text-center">
     <h3 class="text-3xl font-bold mb-12 glow-animation">Why Join Bantu Stream Connect Before Launch?</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition">
-        🎬 <h4 class="font-semibold text-xl mt-2">Exclusive First Access</h4>
-        <p>Be first to explore African content.</p>
+      <div class="p-6 rounded-lg shadow-lg hover:shadow-xl transition bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900">
+        <p class="text-4xl">🎬</p>
+        <h4 class="font-semibold text-xl mt-2 glow-text">Exclusive First Access</h4>
+        <p class="glow-text">Be first to explore African content.</p>
       </div>
-      <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition">
-        💸 <h4 class="font-semibold text-xl mt-2">Support Creators</h4>
-        <p>Empower local voices from day one.</p>
+      <div class="p-6 rounded-lg shadow-lg hover:shadow-xl transition bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900">
+        <p class="text-4xl">💸</p>
+        <h4 class="font-semibold text-xl mt-2 glow-text">Support Creators</h4>
+        <p class="glow-text">Empower local voices from day one.</p>
       </div>
-      <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition">
-        🚀 <h4 class="font-semibold text-xl mt-2">Shape the Platform</h4>
-        <p>Early users get to influence the journey.</p>
+      <div class="p-6 rounded-lg shadow-lg hover:shadow-xl transition bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-900">
+        <p class="text-4xl">🚀</p>
+        <h4 class="font-semibold text-xl mt-2 glow-text">Shape the Platform</h4>
+        <p class="glow-text">Early users get to influence the journey.</p>
       </div>
     </div>
   </section>
@@ -82,48 +85,48 @@ import Layout from '../layouts/Layout.astro';
   <!-- 5. MISSION SECTION / ABOUT US -->
   <section id="about" class="py-20 px-6 text-center relative">
     <h3 class="text-3xl font-bold mb-6 glow-animation">Made by Africans, for Africans</h3>
-    <p class="max-w-3xl mx-auto text-lg text-gray-200 glow-animation">
+    <p class="max-w-3xl mx-auto text-lg glow-text">
       Our mission is to empower creators and audiences across the continent.
       We’re not just building another app — we’re building a digital home for African stories,
       music, and innovation.
     </p>
     <div class="mt-8 relative">
-      <img src="/images/BANTU-STREAM-CONNECT-ICON0001.png" alt="Africa Map Icon" width="120" height="120" class="mx-auto w-32 opacity-90 drop-shadow-lg hover:scale-110 transition-transform duration-500" />
+      <img src="/images/BANTU-STREAM-CONNECT-ICON0001.png" alt="Africa Map Icon" width="120" height="120" class="mx-auto w-32 logo-hover drop-shadow-lg hover:scale-110 transition-transform duration-500" />
     </div>
   </section>
 
   <!-- 6. SIGNUP SECTION -->
   <section id="signup" class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 py-20 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6 text-yellow-300 drop-shadow-lg glow-animation">Be Part of the Movement</h3>
-    <p class="mb-8 text-yellow-200 glow-animation">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
+    <h3 class="text-3xl font-bold mb-6 text-yellow-300 glow-animation">Be Part of the Movement</h3>
+    <p class="mb-8 text-yellow-200 glow-text">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
 
     <form id="signupForm" class="max-w-md mx-auto bg-gradient-to-r from-blue-900 to-blue-700 border-2 border-yellow-400 rounded-lg p-6 space-y-4 shadow-[0_0_20px_rgba(255,215,0,0.7)] glow-animation">
       <input type="text" name="name" placeholder="Name" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
       <input type="email" name="email" placeholder="Email" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
       <input type="password" name="password" placeholder="Password" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
-      <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg transition-all duration-300 pulse-hover glow-animation">Sign Up</button>
+      <button type="submit" class="w-full bg-gradient-to-r from-yellow-400 to-blue-600 hover:from-blue-600 hover:to-yellow-400 text-black px-4 py-2 rounded-lg glow-animation pulse-hover">Sign Up</button>
     </form>
-    <p id="signupMessage" class="mt-4 text-green-600 font-medium glow-animation"></p>
+    <p id="signupMessage" class="mt-4 text-green-600 font-medium glow-text"></p>
   </section>
 
   <!-- 7. COMING SOON SECTION -->
   <section class="text-center py-20 px-6">
     <h3 class="text-3xl font-bold mb-6 glow-animation">Launching Soon</h3>
     <div class="flex justify-center gap-6">
-      <span class="px-4 py-2 bg-gray-200 rounded-lg">Coming Soon on Google Play</span>
-      <span class="px-4 py-2 bg-gray-200 rounded-lg">Coming Soon on App Store</span>
+      <span class="px-4 py-2 bg-gradient-to-r from-blue-600 to-yellow-400 rounded-lg glow-animation pulse-hover">Coming Soon on Google Play</span>
+      <span class="px-4 py-2 bg-gradient-to-r from-blue-600 to-yellow-400 rounded-lg glow-animation pulse-hover">Coming Soon on App Store</span>
     </div>
   </section>
 
   <!-- 8. FOOTER -->
   <footer class="bg-black text-white py-10 px-6 text-center">
     <div class="mb-4 space-x-6">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Contact</a>
+      <a href="#" class="hover:glow-text">Privacy Policy</a>
+      <a href="#" class="hover:glow-text">Terms & Conditions</a>
+      <a href="#" class="hover:glow-text">Contact</a>
     </div>
-    <p class="text-sm">© 2025 Bantu Stream Connect Pty Ltd. All rights reserved.</p>
-    <p class="mt-2 text-xs opacity-75">Built with ❤️ in Africa.</p>
+    <p class="text-sm glow-text">© 2025 Bantu Stream Connect Pty Ltd. All rights reserved.</p>
+    <p class="mt-2 text-xs opacity-75 glow-text">Built with ❤️ in Africa.</p>
   </footer>
 
   <!-- SUPABASE SIGN-UP SCRIPT -->
@@ -140,7 +143,6 @@ import Layout from '../layouts/Layout.astro';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault()
-
       const name = form.name.value
       const email = form.email.value
       const password = form.password.value
@@ -157,7 +159,6 @@ import Layout from '../layouts/Layout.astro';
       message.textContent = 'Sign-up successful! Please check your email to confirm.'
       message.classList.remove('text-red-600')
       message.classList.add('text-green-600')
-
       form.reset()
     })
   </script>
@@ -165,13 +166,17 @@ import Layout from '../layouts/Layout.astro';
   <!-- GLOW ANIMATION STYLE -->
   <style>
     @keyframes glowPulse {
-      0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700; }
-      50% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 25px #FFD700; }
-      100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700; }
+      0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #00FFFF; }
+      50% { text-shadow: 0 0 15px #FFD700, 0 0 25px #00FFFF, 0 0 35px #FFD700; }
+      100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #00FFFF; }
     }
 
     .glow-animation {
       animation: glowPulse 2.5s ease-in-out infinite alternate;
+    }
+
+    .glow-text {
+      text-shadow: 0 0 5px #FFD700, 0 0 10px #00FFFF, 0 0 15px #FFD700;
     }
 
     .pulse-hover:hover {
@@ -179,9 +184,20 @@ import Layout from '../layouts/Layout.astro';
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; }
-      50% { box-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700; }
-      100% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; }
+      0% { box-shadow: 0 0 10px #FFD700, 0 0 20px #00FFFF; }
+      50% { box-shadow: 0 0 20px #FFD700, 0 0 30px #00FFFF; }
+      100% { box-shadow: 0 0 10px #FFD700, 0 0 20px #00FFFF; }
+    }
+
+    .hover-img:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .logo-hover:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 15px #00FFFF);
+      transition: transform 0.5s ease-in-out;
     }
   </style>
 
