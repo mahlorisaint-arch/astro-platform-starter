@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
       <a href="#features" class="hover:text-blue-400">Features</a>
       <a href="#signup" class="hover:text-blue-400">Sign Up</a>
     </nav>
-    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg glow-animation">Join Early</a>
+    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg glow-animation pulse-hover">Join Early</a>
   </header>
 
   <!-- 2. HERO SECTION -->
@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="text-lg md:text-xl mb-8 relative z-10">
       A platform built for African creators and audiences. Music, Film, Podcasts, STEM — all in one place.
     </p>
-    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg relative z-10 glow-animation">Sign Up Today →</a>
+    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg relative z-10 glow-animation pulse-hover">Sign Up Today →</a>
     <div class="mt-10 relative z-10">
       <img 
         src="/images/SPLASH-SCREEN.png" 
@@ -36,9 +36,9 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- 3. APP PREVIEW SECTION -->
+  <!-- 3. APP PREVIEW SECTION: A Glimpse of What's Coming -->
   <section id="features" class="py-20 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-8">A Glimpse of What’s Coming</h3>
+    <h3 class="text-3xl font-bold mb-8 glow-animation">A Glimpse of What’s Coming</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="p-4 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition">
         <img src="/images/CREATOR-UPLOAD-1.png" alt="Upload Screen" width="300" height="600" class="rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
@@ -60,9 +60,9 @@ import Layout from '../layouts/Layout.astro';
     <p class="mt-6 text-gray-600">Built with security and community at heart. Your data is safe with us.</p>
   </section>
 
-  <!-- 4. BENEFITS SECTION -->
+  <!-- 4. BENEFITS SECTION: Why Join Bantu Stream Connect Before Launch? -->
   <section class="bg-gray-900 text-white py-20 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-12">Why Join Bantu Stream Connect Before Launch?</h3>
+    <h3 class="text-3xl font-bold mb-12 glow-animation">Why Join Bantu Stream Connect Before Launch?</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition">
         🎬 <h4 class="font-semibold text-xl mt-2">Exclusive First Access</h4>
@@ -79,10 +79,10 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- 5. MISSION SECTION -->
+  <!-- 5. MISSION SECTION / ABOUT US -->
   <section id="about" class="py-20 px-6 text-center relative">
-    <h3 class="text-3xl font-bold mb-6">Made by Africans, for Africans</h3>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700">
+    <h3 class="text-3xl font-bold mb-6 glow-animation">Made by Africans, for Africans</h3>
+    <p class="max-w-3xl mx-auto text-lg text-gray-200 glow-animation">
       Our mission is to empower creators and audiences across the continent.
       We’re not just building another app — we’re building a digital home for African stories,
       music, and innovation.
@@ -101,14 +101,14 @@ import Layout from '../layouts/Layout.astro';
       <input type="text" name="name" placeholder="Name" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
       <input type="email" name="email" placeholder="Email" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
       <input type="password" name="password" placeholder="Password" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
-      <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)] glow-animation">Sign Up</button>
+      <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg transition-all duration-300 pulse-hover glow-animation">Sign Up</button>
     </form>
     <p id="signupMessage" class="mt-4 text-green-600 font-medium glow-animation"></p>
   </section>
 
   <!-- 7. COMING SOON SECTION -->
   <section class="text-center py-20 px-6">
-    <h3 class="text-3xl font-bold mb-6">Launching Soon</h3>
+    <h3 class="text-3xl font-bold mb-6 glow-animation">Launching Soon</h3>
     <div class="flex justify-center gap-6">
       <span class="px-4 py-2 bg-gray-200 rounded-lg">Coming Soon on Google Play</span>
       <span class="px-4 py-2 bg-gray-200 rounded-lg">Coming Soon on App Store</span>
@@ -131,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
     import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
     const supabaseUrl = 'https://ydnxqnbjoshvxteevemc.supabase.co'
-    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkbnhxbmJqb3Nodnh0ZWV2ZW1jIiwicm9sZSIsImV4cCI6MjA3MzIwODQ5M30.NlaCCnLPSz1m7AFeSlfZQ78kYEKUMh_Fi-7P_ccs_U'
+    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkbnhxbmJqb3Nodnh0ZWVtYyIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzU3NjMyNDkzLCJleHAiOjIwNzMyMDg0OTN9.NlaCCnLPSz1m7AFeSlfZQ78kYEKUMh_Fi-7P_ccs_U'
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
@@ -145,11 +145,7 @@ import Layout from '../layouts/Layout.astro';
       const email = form.email.value
       const password = form.password.value
 
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { data: { full_name: name } }
-      })
+      const { data, error } = await supabase.auth.signUp({ email, password })
 
       if (error) {
         message.textContent = 'Sign-up failed: ' + error.message
@@ -176,6 +172,16 @@ import Layout from '../layouts/Layout.astro';
 
     .glow-animation {
       animation: glowPulse 2.5s ease-in-out infinite alternate;
+    }
+
+    .pulse-hover:hover {
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; }
+      50% { box-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700; }
+      100% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; }
     }
   </style>
 
