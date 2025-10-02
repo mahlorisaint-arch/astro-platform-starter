@@ -93,15 +93,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- 6. SIGNUP SECTION -->
-  <section id="signup" class="bg-blue-50 py-20 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6">Be Part of the Movement</h3>
-    <p class="mb-8">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
+  <section id="signup" class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-6 text-yellow-300 drop-shadow-lg">Be Part of the Movement</h3>
+    <p class="mb-8 text-yellow-200">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
 
-    <form id="signupForm" class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4">
-      <input type="text" name="name" placeholder="Name" class="w-full border rounded px-4 py-2" required />
-      <input type="email" name="email" placeholder="Email" class="w-full border rounded px-4 py-2" required />
-      <input type="password" name="password" placeholder="Password" class="w-full border rounded px-4 py-2" required />
-      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Sign Up</button>
+    <form id="signupForm" class="max-w-md mx-auto bg-gradient-to-r from-blue-900 to-blue-700 border-2 border-yellow-400 rounded-lg p-6 space-y-4 shadow-[0_0_20px_rgba(255,215,0,0.7)]">
+      <input type="text" name="name" placeholder="Name" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      <input type="email" name="email" placeholder="Email" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      <input type="password" name="password" placeholder="Password" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)]">Sign Up</button>
     </form>
     <p id="signupMessage" class="mt-4 text-green-600 font-medium"></p>
   </section>
@@ -131,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
     import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
     const supabaseUrl = 'https://ydnxqnbjoshvxteevemc.supabase.co'
-    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkbnhxbmJqb3Nodnh0ZWVtYyIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzU3NjMyNDkzLCJleHAiOjIwNzMyMDg0OTN9.NlaCCnLPSz1m7AFeSlfZQ78kYEKUMh_Fi-7P_ccs_U'
+    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkbnhxbmJqb3Nodnh0ZWV2ZW1jIiwicm9sZSIsImV4cCI6MjA3MzIwODQ5M30.NlaCCnLPSz1m7AFeSlfZQ78kYEKUMh_Fi-7P_ccs_U'
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
@@ -145,7 +145,11 @@ import Layout from '../layouts/Layout.astro';
       const email = form.email.value
       const password = form.password.value
 
-      const { data, error } = await supabase.auth.signUp({ email, password })
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: { data: { full_name: name } }
+      })
 
       if (error) {
         message.textContent = 'Sign-up failed: ' + error.message
