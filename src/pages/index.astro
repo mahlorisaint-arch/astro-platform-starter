@@ -96,12 +96,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="signup" class="bg-blue-50 py-20 px-6 text-center">
     <h3 class="text-3xl font-bold mb-6">Be Part of the Movement</h3>
     <p class="mb-8">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
-    <form class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4">
-      <input type="text" placeholder="Name" class="w-full border rounded px-4 py-2" />
-      <input type="email" placeholder="Email" class="w-full border rounded px-4 py-2" />
-      <input type="password" placeholder="Password" class="w-full border rounded px-4 py-2" />
+
+    <form id="signupForm" class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4">
+      <input type="text" name="name" placeholder="Name" class="w-full border rounded px-4 py-2" required />
+      <input type="email" name="email" placeholder="Email" class="w-full border rounded px-4 py-2" required />
+      <input type="password" name="password" placeholder="Password" class="w-full border rounded px-4 py-2" required />
       <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Sign Up</button>
     </form>
+    <p id="signupMessage" class="mt-4 text-green-600 font-medium"></p>
   </section>
 
   <!-- 7. COMING SOON SECTION -->
@@ -123,5 +125,41 @@ import Layout from '../layouts/Layout.astro';
     <p class="text-sm">© 2025 Bantu Stream Connect Pty Ltd. All rights reserved.</p>
     <p class="mt-2 text-xs opacity-75">Built with ❤️ in Africa.</p>
   </footer>
+
+  <!-- SUPABASE SIGN-UP SCRIPT -->
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    const supabaseUrl = 'https://ydnxqnbjoshvxteevemc.supabase.co'
+    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkbnhxbmJqb3Nodnh0ZWVtYyIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzU3NjMyNDkzLCJleHAiOjIwNzMyMDg0OTN9.NlaCCnLPSz1m7AFeSlfZQ78kYEKUMh_Fi-7P_ccs_U'
+
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+    const form = document.getElementById('signupForm')
+    const message = document.getElementById('signupMessage')
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+
+      const name = form.name.value
+      const email = form.email.value
+      const password = form.password.value
+
+      const { data, error } = await supabase.auth.signUp({ email, password })
+
+      if (error) {
+        message.textContent = 'Sign-up failed: ' + error.message
+        message.classList.remove('text-green-600')
+        message.classList.add('text-red-600')
+        return
+      }
+
+      message.textContent = 'Sign-up successful! Please check your email to confirm.'
+      message.classList.remove('text-red-600')
+      message.classList.add('text-green-600')
+
+      form.reset()
+    })
+  </script>
 
 </Layout>
