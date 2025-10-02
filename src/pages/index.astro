@@ -12,19 +12,19 @@ import Layout from '../layouts/Layout.astro';
       <a href="#features" class="hover:text-blue-400">Features</a>
       <a href="#signup" class="hover:text-blue-400">Sign Up</a>
     </nav>
-    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Join Early</a>
+    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg glow-animation">Join Early</a>
   </header>
 
   <!-- 2. HERO SECTION -->
   <section class="text-center bg-gradient-to-r from-blue-900 to-black text-white py-20 px-6 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 blur-3xl"></div>
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 relative z-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 relative z-10 glow-animation">
       The African way baba, it’s all in the DNA.
     </h2>
     <p class="text-lg md:text-xl mb-8 relative z-10">
       A platform built for African creators and audiences. Music, Film, Podcasts, STEM — all in one place.
     </p>
-    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg relative z-10">Sign Up Today →</a>
+    <a href="#signup" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg relative z-10 glow-animation">Sign Up Today →</a>
     <div class="mt-10 relative z-10">
       <img 
         src="/images/SPLASH-SCREEN.png" 
@@ -94,16 +94,16 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- 6. SIGNUP SECTION -->
   <section id="signup" class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 py-20 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6 text-yellow-300 drop-shadow-lg">Be Part of the Movement</h3>
-    <p class="mb-8 text-yellow-200">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
+    <h3 class="text-3xl font-bold mb-6 text-yellow-300 drop-shadow-lg glow-animation">Be Part of the Movement</h3>
+    <p class="mb-8 text-yellow-200 glow-animation">Sign up now and secure your spot as one of the first members of Bantu Stream Connect.</p>
 
-    <form id="signupForm" class="max-w-md mx-auto bg-gradient-to-r from-blue-900 to-blue-700 border-2 border-yellow-400 rounded-lg p-6 space-y-4 shadow-[0_0_20px_rgba(255,215,0,0.7)]">
+    <form id="signupForm" class="max-w-md mx-auto bg-gradient-to-r from-blue-900 to-blue-700 border-2 border-yellow-400 rounded-lg p-6 space-y-4 shadow-[0_0_20px_rgba(255,215,0,0.7)] glow-animation">
       <input type="text" name="name" placeholder="Name" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
       <input type="email" name="email" placeholder="Email" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
       <input type="password" name="password" placeholder="Password" class="w-full border-2 border-yellow-400 rounded px-4 py-2 bg-blue-800 text-white placeholder-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
-      <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)]">Sign Up</button>
+      <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-yellow-400 hover:to-blue-600 text-black px-4 py-2 rounded-lg font-bold shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)] glow-animation">Sign Up</button>
     </form>
-    <p id="signupMessage" class="mt-4 text-green-600 font-medium"></p>
+    <p id="signupMessage" class="mt-4 text-green-600 font-medium glow-animation"></p>
   </section>
 
   <!-- 7. COMING SOON SECTION -->
@@ -165,5 +165,18 @@ import Layout from '../layouts/Layout.astro';
       form.reset()
     })
   </script>
+
+  <!-- GLOW ANIMATION STYLE -->
+  <style>
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700; }
+      50% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 25px #FFD700; }
+      100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700; }
+    }
+
+    .glow-animation {
+      animation: glowPulse 2.5s ease-in-out infinite alternate;
+    }
+  </style>
 
 </Layout>
